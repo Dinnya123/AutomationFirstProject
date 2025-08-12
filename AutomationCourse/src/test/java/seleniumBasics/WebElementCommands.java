@@ -11,10 +11,14 @@ public class WebElementCommands extends Base {
 		msgBox.sendKeys("Dinnya");
 		WebElement button=driver.findElement(By.xpath("//button[@id='button-one']"));
 		button.click();
-		WebElement message=driver.findElement(By.xpath("//div[@id='message-one']"));
+		System.out.println(button.isDisplayed());
+		System.out.println(button.isEnabled());
 		
+		
+		WebElement message=driver.findElement(By.xpath("//div[@id='message-one']"));
 		System.out.println(message.getText());
 		msgBox.clear();
+		
 		System.out.println(button.getCssValue("background-color"));
 		
 		WebElement value=driver.findElement(By.id("value-a"));
