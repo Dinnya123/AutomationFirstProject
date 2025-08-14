@@ -12,7 +12,7 @@ public class HandlingDropDown extends Base {
 		Select select=new Select(dropdown);
 		//select.selectByIndex(3);
 		//select.selectByValue("sql");
-		select.selectByVisibleText("Python");
+		select.selectByVisibleText("C#");
 		
 	}
 	
