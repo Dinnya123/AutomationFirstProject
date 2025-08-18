@@ -22,11 +22,19 @@ public void verifyConfirmAlert() {
 	
 }
 
-
+public void verifyPromptAlert() {
+	driver.navigate().to("https://demoqa.com/alerts");
+    WebElement prompt=driver.findElement(By.id("promtButton"));
+    prompt.click();
+	Alert alert=driver.switchTo().alert();
+    alert.sendKeys("ok");
+    alert.accept();
+}
 public static void main(String[] args) {
 	HandlingAlerts handlingalerts=new HandlingAlerts();
 	handlingalerts.initializeBrowser();
 	handlingalerts.verifySimpleAlert();
 	handlingalerts.verifyConfirmAlert();
+	handlingalerts.verifyPromptAlert();
 }
 }
